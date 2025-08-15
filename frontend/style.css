@@ -245,6 +245,49 @@ header h1 {
     color: var(--text-secondary);
 }
 
+/* Source link styling */
+.sources-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0.25rem 0.375rem 0.25rem 0;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.sources-content a:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.25);
+    color: var(--text-primary);
+}
+
+.sources-content a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.sources-content a:active {
+    transform: translateY(0);
+    background: rgba(37, 99, 235, 0.2);
+}
+
+/* External link indicator */
+.sources-content a::after {
+    content: ' ↗';
+    opacity: 0.6;
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+}
+
 /* Markdown formatting styles */
 .message-content h1,
 .message-content h2,
@@ -599,6 +642,37 @@ details[open] .suggested-header::before {
     color: var(--text-secondary);
     font-style: italic;
     text-transform: none;
+}
+
+/* New Chat Button */
+.new-chat-button {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    text-align: left;
+}
+
+.new-chat-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.new-chat-button:hover {
+    color: var(--primary-color);
+    background: var(--surface-hover);
+    border-color: var(--primary-color);
+    transform: translateX(2px);
 }
 
 /* Suggested Questions in Sidebar */
